@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+ 
+     <div class="location">
+         <h1 class="location-timezone">Timezone</h1>
+        <p>Icon</p>
+        </div>
+
+        <!-- temperature description -->
+        <div class="temperature">
+            <div class="degree-section">
+            <h2 class="temp-degree">32</h2>
+           <span>C</span>
+        </div>
+       <div class="temp-description">Its freaking cold</div>
+ 
+        </div>
+        <script src="app.js"> 
+        </script>
+
+        <script>
+         window.addEventListener("load", () => {
+    let long;
+    let lat;
+
+    if (navigator.getLocation){
+       navigator.glocation.getCurrentPosition(position => {
+           console.log(position)
+       })        
+    }
+} )
+
+        </script>
+</body>
+</html>
