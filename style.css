@@ -10,9 +10,14 @@ body {
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    background-image: linear-gradient(rgb(47, 150, 163), rgb(48 ,62, 143));
+    background-image: linear-gradient(rgb(56, 128, 211), rgb(48 ,62, 143));
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:white;
+    transform: rotateX(10deg);
+}
+
+@keyframes rotate {
+    0% {transform: rotate(60deg)}
 }
 
 .location , .temperature{
@@ -40,4 +45,9 @@ body {
 
 .degree-section h2 {
     font-size: 40px;
+}
+
+
+@keyframes rotate {
+
 }
