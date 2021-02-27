@@ -1,7 +1,10 @@
 window.addEventListener('load', ()=>{
+  // html div selectors 
   let long;
   let lat;
-  
+  let temperatureDescription = document.querySelector('.temperature')
+  let temperatureDegree = document.querySelector('.temp-degree')
+  let locationTimezone = document.querySelector('.location-timezone')
 
 if (navigator.geolocation){
   navigator.geolocation.getCurrentPosition(position => {
@@ -13,12 +16,14 @@ if (navigator.geolocation){
            .then(response => {
              return response.json()
             })
+            // Shows the tempperature rounded down in degreess
              .then(data => {
-               console.log(data);
-               const {temp , summary} = data.currently
-             })                 
-          });
-}
+               console.log(data.main);
+               const temp = data.main.temp - 273.15;
+               temperatureDegree.textContent = Math.floor(temp);
+            })                 
+        });
+     }
 } )
 
 
