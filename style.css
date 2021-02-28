@@ -1,53 +1,85 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    background-image: linear-gradient(rgb(56, 128, 211), rgb(48 ,62, 143));
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:white;
-    transform: rotateX(10deg);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3880d3), to(#303e8f));
+  background-image: linear-gradient(#3880d3, #303e8f);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  -webkit-transform: rotateX(10deg);
+          transform: rotateX(10deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
 }
 
 @keyframes rotate {
-    0% {transform: rotate(60deg)}
+  0% {
+    -webkit-transform: rotate(60deg);
+            transform: rotate(60deg);
+  }
 }
 
-.location , .temperature{
-    height: 30vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
+.location, .temperature {
+  height: 30vh;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .temperature {
-    flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .degree-section {
-    display: flex;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .degree-section span {
-    margin:10px;
-    font-size: 30px;
-    cursor:pointer;
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 .degree-section h2 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
-
-
-@keyframes rotate {
-}
+@keyframes rotate {}
+/*# sourceMappingURL=style.css.map */
