@@ -8,8 +8,6 @@ window.addEventListener('load', ()=> {
   let temperatureSection = document.querySelector('.temperature');
   const temperatureSpan = document.querySelector('.temperature .degree-section span');
 
-
-
 if (navigator.geolocation){
   navigator.geolocation.getCurrentPosition(position => {
     long = position.coords.longitude
@@ -52,7 +50,7 @@ if (navigator.geolocation){
        skycons.play();
        return skycons.set(iconId , Skycons[currentIcon])
       }
-    })
+    });
 
 
     // function to change from one measurement to another
